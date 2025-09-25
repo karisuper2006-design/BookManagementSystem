@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\labs\\BookManagementSystem\\Model\\Model.csproj": {}
+    "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\Model.csproj": {}
   },
   "projects": {
-    "E:\\labs\\BookManagementSystem\\Model\\Model.csproj": {
+    "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\labs\\BookManagementSystem\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "E:\\labs\\BookManagementSystem\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-        "outputPath": "E:\\labs\\BookManagementSystem\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Zver\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\visual studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Zver\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

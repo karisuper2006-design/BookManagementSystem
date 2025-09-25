@@ -2,14 +2,9 @@ using BookManagementSystem.Logic;
 using BookManagementSystem.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp
 {
@@ -21,7 +16,7 @@ namespace WinFormsApp
         {
             InitializeComponent();
             _logic = new BookLogic();
-            // Заполним комбобокс жанрами
+            
             comboBoxGenre.Items.AddRange(new string[] {
                 "Фантастика",
                 "Роман",
@@ -166,16 +161,46 @@ namespace WinFormsApp
             MessageBox.Show(result.ToString(), "Группировка по жанрам");
         }
 
+        
         private void btnFind_Click(object sender, EventArgs e)
         {
             var author = textBoxSearchAuthor.Text;
-            if (string.IsNullOrEmpty(author))
+
+            List<Book> books = new List<Book>();
+
+            if (!string.IsNullOrWhiteSpace(author))
+            {
+            
+                books = _logic.FindBooksByAuthor(author);
+            }
+            else
             {
                 MessageBox.Show("Введите имя автора для поиска.");
                 return;
             }
 
-            var books = _logic.FindBooksByAuthor(author);
+            if (books.Any())
+            {
+                var result = string.Join("\n", books.Select(b => b.ToString()));
+                MessageBox.Show(result, "Найденные книги");
+            }
+            else
+            {
+                MessageBox.Show("Книги не найдены.");
+            }
+        }
+
+        
+        private void btnFindTitle_Click(object sender, EventArgs e)
+        {
+            var title = textBoxSearchTitle.Text;
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                MessageBox.Show("Введите название книги для поиска.");
+                return;
+            }
+
+            var books = _logic.FindBooksByTitle(title);
             if (books.Any())
             {
                 var result = string.Join("\n", books.Select(b => b.ToString()));
@@ -195,11 +220,38 @@ namespace WinFormsApp
             textBoxYear.Clear();
             comboBoxGenre.SelectedIndex = -1;
             textBoxSearchAuthor.Clear();
+            textBoxSearchTitle.Clear();
         }
 
         private void listBoxBooks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Обработчик уже реализован в btnUpdate_Click
+            
+        }
+
+        private void textBoxSearchTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFindTitle_Click_1(object sender, EventArgs e)
+        {
+            var title = textBoxSearchTitle.Text;
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                MessageBox.Show("Введите название книги для поиска.");
+                return;
+            }
+
+            var books = _logic.FindBooksByTitle(title);
+            if (books.Any())
+            {
+                var result = string.Join("\n", books.Select(b => b.ToString()));
+                MessageBox.Show(result, "Найденные книги");
+            }
+            else
+            {
+                MessageBox.Show("Книги не найдены.");
+            }
         }
     }
 }

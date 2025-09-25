@@ -46,23 +46,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danil\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Zver\\.nuget\\packages\\": {},
+    "D:\\visual studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\labs\\BookManagementSystem\\WinFormsApp\\WinFormsApp.csproj",
+      "projectUniqueName": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\WinFormsApp\\WinFormsApp.csproj",
       "projectName": "WinFormsApp",
-      "projectPath": "E:\\labs\\BookManagementSystem\\WinFormsApp\\WinFormsApp.csproj",
-      "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-      "outputPath": "E:\\labs\\BookManagementSystem\\WinFormsApp\\obj\\",
+      "projectPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\WinFormsApp\\WinFormsApp.csproj",
+      "packagesPath": "C:\\Users\\Zver\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Zver\\source\\repos\\BookManagementSystem\\WinFormsApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\visual studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Zver\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -71,18 +71,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "E:\\labs\\BookManagementSystem\\Logic\\Logic.csproj": {
-              "projectPath": "E:\\labs\\BookManagementSystem\\Logic\\Logic.csproj"
+            "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Logic\\Logic.csproj"
             },
-            "E:\\labs\\BookManagementSystem\\Model\\Model.csproj": {
-              "projectPath": "E:\\labs\\BookManagementSystem\\Model\\Model.csproj"
+            "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Model\\Model.csproj"
             }
           }
         }
@@ -121,7 +120,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
