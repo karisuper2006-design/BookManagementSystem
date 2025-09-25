@@ -70,5 +70,14 @@ namespace BookManagementSystem.Logic
         {
             return _books.Where(b => b.Author.Equals(author, StringComparison.OrdinalIgnoreCase)).ToList();
         }
+
+        // 5. Бизнес-функция 3: Поиск книг по названию (частичное совпадение)
+        public List<Book> FindBooksByTitle(string title)
+        {
+            if (string.IsNullOrWhiteSpace(title))
+                return new List<Book>();
+
+            return _books.Where(b => b.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }

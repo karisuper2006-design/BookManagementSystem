@@ -28,236 +28,269 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxBooks = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxAuthor = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxYear = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxGenre = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnGroup = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxSearchAuthor = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            listBoxBooks = new ListBox();
+            label1 = new Label();
+            label2 = new Label();
+            textBoxTitle = new TextBox();
+            label3 = new Label();
+            textBoxAuthor = new TextBox();
+            label4 = new Label();
+            textBoxYear = new TextBox();
+            label5 = new Label();
+            comboBoxGenre = new ComboBox();
+            btnAdd = new Button();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            btnSave = new Button();
+            btnGroup = new Button();
+            btnFind = new Button();
+            label6 = new Label();
+            textBoxSearchAuthor = new TextBox();
+            label7 = new Label();
+            textBoxId = new TextBox();
+            textBoxSearchTitle = new TextBox();
+            label8 = new Label();
+            btnFindTitle = new Button();
+            SuspendLayout();
             // 
             // listBoxBooks
             // 
-            this.listBoxBooks.FormattingEnabled = true;
-            this.listBoxBooks.ItemHeight = 16;
-            this.listBoxBooks.Location = new System.Drawing.Point(12, 34);
-            this.listBoxBooks.Name = "listBoxBooks";
-            this.listBoxBooks.Size = new System.Drawing.Size(776, 244);
-            this.listBoxBooks.TabIndex = 0;
-            this.listBoxBooks.SelectedIndexChanged += new System.EventHandler(this.listBoxBooks_SelectedIndexChanged);
+            listBoxBooks.FormattingEnabled = true;
+            listBoxBooks.ItemHeight = 15;
+            listBoxBooks.Location = new Point(10, 32);
+            listBoxBooks.Name = "listBoxBooks";
+            listBoxBooks.Size = new Size(680, 229);
+            listBoxBooks.TabIndex = 0;
+            listBoxBooks.SelectedIndexChanged += listBoxBooks_SelectedIndexChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Список книг:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.Location = new Point(10, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 17);
+            label1.TabIndex = 1;
+            label1.Text = "Список книг:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 295);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Название:";
+            label2.AutoSize = true;
+            label2.Location = new Point(10, 277);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Название:";
             // 
             // textBoxTitle
             // 
-            this.textBoxTitle.Location = new System.Drawing.Point(94, 292);
-            this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(200, 22);
-            this.textBoxTitle.TabIndex = 3;
+            textBoxTitle.Location = new Point(82, 274);
+            textBoxTitle.Name = "textBoxTitle";
+            textBoxTitle.Size = new Size(176, 23);
+            textBoxTitle.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(310, 295);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Автор:";
+            label3.AutoSize = true;
+            label3.Location = new Point(271, 277);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 15);
+            label3.TabIndex = 4;
+            label3.Text = "Автор:";
             // 
             // textBoxAuthor
             // 
-            this.textBoxAuthor.Location = new System.Drawing.Point(365, 292);
-            this.textBoxAuthor.Name = "textBoxAuthor";
-            this.textBoxAuthor.Size = new System.Drawing.Size(200, 22);
-            this.textBoxAuthor.TabIndex = 5;
+            textBoxAuthor.Location = new Point(319, 274);
+            textBoxAuthor.Name = "textBoxAuthor";
+            textBoxAuthor.Size = new Size(176, 23);
+            textBoxAuthor.TabIndex = 5;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(580, 295);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Год:";
+            label4.AutoSize = true;
+            label4.Location = new Point(508, 277);
+            label4.Name = "label4";
+            label4.Size = new Size(29, 15);
+            label4.TabIndex = 6;
+            label4.Text = "Год:";
             // 
             // textBoxYear
             // 
-            this.textBoxYear.Location = new System.Drawing.Point(620, 292);
-            this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(100, 22);
-            this.textBoxYear.TabIndex = 7;
+            textBoxYear.Location = new Point(542, 274);
+            textBoxYear.Name = "textBoxYear";
+            textBoxYear.Size = new Size(88, 23);
+            textBoxYear.TabIndex = 7;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 330);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Жанр:";
+            label5.AutoSize = true;
+            label5.Location = new Point(10, 309);
+            label5.Name = "label5";
+            label5.Size = new Size(41, 15);
+            label5.TabIndex = 8;
+            label5.Text = "Жанр:";
             // 
             // comboBoxGenre
             // 
-            this.comboBoxGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Location = new System.Drawing.Point(94, 327);
-            this.comboBoxGenre.Name = "comboBoxGenre";
-            this.comboBoxGenre.Size = new System.Drawing.Size(200, 24);
-            this.comboBoxGenre.TabIndex = 9;
+            comboBoxGenre.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxGenre.FormattingEnabled = true;
+            comboBoxGenre.Location = new Point(82, 307);
+            comboBoxGenre.Name = "comboBoxGenre";
+            comboBoxGenre.Size = new Size(176, 23);
+            comboBoxGenre.TabIndex = 9;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(15, 370);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 35);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Добавить";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            btnAdd.Location = new Point(13, 347);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(105, 33);
+            btnAdd.TabIndex = 10;
+            btnAdd.Text = "Добавить";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(150, 370);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 35);
-            this.btnDelete.TabIndex = 11;
-            this.btnDelete.Text = "Удалить";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            btnDelete.Location = new Point(131, 347);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(105, 33);
+            btnDelete.TabIndex = 11;
+            btnDelete.Text = "Удалить";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(285, 370);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 35);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Редактировать";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            btnUpdate.Location = new Point(249, 347);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(105, 33);
+            btnUpdate.TabIndex = 12;
+            btnUpdate.Text = "Редактировать";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(420, 370);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 35);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Сохранить";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Location = new Point(368, 347);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(105, 33);
+            btnSave.TabIndex = 13;
+            btnSave.Text = "Сохранить";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnGroup
             // 
-            this.btnGroup.Location = new System.Drawing.Point(555, 370);
-            this.btnGroup.Name = "btnGroup";
-            this.btnGroup.Size = new System.Drawing.Size(233, 35);
-            this.btnGroup.TabIndex = 14;
-            this.btnGroup.Text = "Группировка по жанрам";
-            this.btnGroup.UseVisualStyleBackColor = true;
-            this.btnGroup.Click += new System.EventHandler(this.btnGroup_Click);
+            btnGroup.Location = new Point(486, 347);
+            btnGroup.Name = "btnGroup";
+            btnGroup.Size = new Size(204, 33);
+            btnGroup.TabIndex = 14;
+            btnGroup.Text = "Группировка по жанрам";
+            btnGroup.UseVisualStyleBackColor = true;
+            btnGroup.Click += btnGroup_Click;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(645, 420);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(143, 35);
-            this.btnFind.TabIndex = 15;
-            this.btnFind.Text = "Найти по автору";
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            btnFind.Location = new Point(564, 394);
+            btnFind.Name = "btnFind";
+            btnFind.Size = new Size(125, 33);
+            btnFind.TabIndex = 15;
+            btnFind.Text = "Найти по автору";
+            btnFind.UseVisualStyleBackColor = true;
+            btnFind.Click += btnFind_Click;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 430);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 16);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Поиск по автору:";
+            label6.AutoSize = true;
+            label6.Location = new Point(10, 403);
+            label6.Name = "label6";
+            label6.Size = new Size(102, 15);
+            label6.TabIndex = 16;
+            label6.Text = "Поиск по автору:";
             // 
             // textBoxSearchAuthor
             // 
-            this.textBoxSearchAuthor.Location = new System.Drawing.Point(154, 427);
-            this.textBoxSearchAuthor.Name = "textBoxSearchAuthor";
-            this.textBoxSearchAuthor.Size = new System.Drawing.Size(200, 22);
-            this.textBoxSearchAuthor.TabIndex = 17;
+            textBoxSearchAuthor.Location = new Point(135, 400);
+            textBoxSearchAuthor.Name = "textBoxSearchAuthor";
+            textBoxSearchAuthor.Size = new Size(176, 23);
+            textBoxSearchAuthor.TabIndex = 17;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(735, 295);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 16);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "ID:";
+            label7.AutoSize = true;
+            label7.Location = new Point(643, 277);
+            label7.Name = "label7";
+            label7.Size = new Size(21, 15);
+            label7.TabIndex = 18;
+            label7.Text = "ID:";
             // 
             // textBoxId
             // 
-            this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(764, 292);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(24, 22);
-            this.textBoxId.TabIndex = 19;
+            textBoxId.Enabled = false;
+            textBoxId.Location = new Point(668, 274);
+            textBoxId.Name = "textBoxId";
+            textBoxId.Size = new Size(22, 23);
+            textBoxId.TabIndex = 19;
+            // 
+            // textBoxSearchTitle
+            // 
+            textBoxSearchTitle.Location = new Point(398, 312);
+            textBoxSearchTitle.Name = "textBoxSearchTitle";
+            textBoxSearchTitle.Size = new Size(100, 23);
+            textBoxSearchTitle.TabIndex = 20;
+            textBoxSearchTitle.TextChanged += textBoxSearchTitle_TextChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(273, 315);
+            label8.Name = "label8";
+            label8.Size = new Size(119, 15);
+            label8.TabIndex = 21;
+            label8.Text = "Поиск по названию:";
+            // 
+            // btnFindTitle
+            // 
+            btnFindTitle.Location = new Point(522, 312);
+            btnFindTitle.Name = "btnFindTitle";
+            btnFindTitle.Size = new Size(108, 23);
+            btnFindTitle.TabIndex = 22;
+            btnFindTitle.Text = "Найти";
+            btnFindTitle.UseVisualStyleBackColor = true;
+            btnFindTitle.Click += btnFindTitle_Click_1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 467);
-            this.Controls.Add(this.textBoxId);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxSearchAuthor);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.btnGroup);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.comboBoxGenre);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxYear);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxAuthor);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxTitle);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBoxBooks);
-            this.Name = "Form1";
-            this.Text = "Управление книгами";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 438);
+            Controls.Add(btnFindTitle);
+            Controls.Add(label8);
+            Controls.Add(textBoxSearchTitle);
+            Controls.Add(textBoxId);
+            Controls.Add(label7);
+            Controls.Add(textBoxSearchAuthor);
+            Controls.Add(label6);
+            Controls.Add(btnFind);
+            Controls.Add(btnGroup);
+            Controls.Add(btnSave);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnDelete);
+            Controls.Add(btnAdd);
+            Controls.Add(comboBoxGenre);
+            Controls.Add(label5);
+            Controls.Add(textBoxYear);
+            Controls.Add(label4);
+            Controls.Add(textBoxAuthor);
+            Controls.Add(label3);
+            Controls.Add(textBoxTitle);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(listBoxBooks);
+            Name = "Form1";
+            Text = "Управление книгами";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -283,5 +316,8 @@
         private System.Windows.Forms.TextBox textBoxSearchAuthor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxId;
+        private TextBox textBoxSearchTitle;
+        private Label label8;
+        private Button btnFindTitle;
     }
 }
