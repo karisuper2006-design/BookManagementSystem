@@ -16,7 +16,7 @@ namespace WinFormsApp
         {
             InitializeComponent();
             _logic = new BookLogic();
-            // Заполним комбобокс жанрами
+            
             comboBoxGenre.Items.AddRange(new string[] {
                 "Фантастика",
                 "Роман",
@@ -161,7 +161,7 @@ namespace WinFormsApp
             MessageBox.Show(result.ToString(), "Группировка по жанрам");
         }
 
-        // Улучшенный метод поиска - ищет по автору ИЛИ по названию
+        
         private void btnFind_Click(object sender, EventArgs e)
         {
             var author = textBoxSearchAuthor.Text;
@@ -170,7 +170,7 @@ namespace WinFormsApp
 
             if (!string.IsNullOrWhiteSpace(author))
             {
-                // Поиск по автору
+            
                 books = _logic.FindBooksByAuthor(author);
             }
             else
@@ -190,7 +190,7 @@ namespace WinFormsApp
             }
         }
 
-        // Альтернативный метод - отдельная кнопка для поиска по названию
+        
         private void btnFindTitle_Click(object sender, EventArgs e)
         {
             var title = textBoxSearchTitle.Text;
@@ -225,7 +225,7 @@ namespace WinFormsApp
 
         private void listBoxBooks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Обработчик уже реализован в btnUpdate_Click
+            
         }
 
         private void textBoxSearchTitle_TextChanged(object sender, EventArgs e)
