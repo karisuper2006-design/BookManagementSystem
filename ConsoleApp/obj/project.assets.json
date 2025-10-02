@@ -56,7 +56,7 @@
       "projectName": "ConsoleApp",
       "projectPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\ConsoleApp\\ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\Zver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zver\\source\\repos\\BookManagementSystem\\ConsoleApp\\obj\\",
+      "outputPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\visual studio\\Shared\\NuGetPackages"
