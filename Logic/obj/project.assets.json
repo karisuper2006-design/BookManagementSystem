@@ -37,7 +37,7 @@
       "projectName": "Logic",
       "projectPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Logic\\Logic.csproj",
       "packagesPath": "C:\\Users\\Zver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zver\\source\\repos\\BookManagementSystem\\Logic\\obj\\",
+      "outputPath": "C:\\Users\\Zver\\Source\\Repos\\BookManagementSystem\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\visual studio\\Shared\\NuGetPackages"

@@ -1,4 +1,4 @@
-using BookManagementSystem.Logic;
+п»їusing BookManagementSystem.Logic;
 using BookManagementSystem.Model;
 using System;
 using System.Collections.Generic;
@@ -16,16 +16,17 @@ namespace WinFormsApp
         {
             InitializeComponent();
             _logic = new BookLogic();
+            this.Activated += Form1_Activated;
             
             comboBoxGenre.Items.AddRange(new string[] {
-                "Фантастика",
-                "Роман",
-                "Детектив",
-                "Научная фантастика",
-                "Приключения",
-                "Исторический роман",
-                "Биография",
-                "Поэзия"
+                "Р¤Р°РЅС‚Р°СЃС‚РёРєР°",
+                "Р РѕРјР°РЅ",
+                "Р”РµС‚РµРєС‚РёРІ",
+                "РќР°СѓС‡РЅР°СЏ С„Р°РЅС‚Р°СЃС‚РёРєР°",
+                "РџСЂРёРєР»СЋС‡РµРЅРёСЏ",
+                "РСЃС‚РѕСЂРёС‡РµСЃРєРёР№ СЂРѕРјР°РЅ",
+                "Р‘РёРѕРіСЂР°С„РёСЏ",
+                "РџРѕСЌР·РёСЏ"
             });
             LoadBooks();
         }
@@ -48,27 +49,27 @@ namespace WinFormsApp
 
             if (!int.TryParse(textBoxYear.Text, out year))
             {
-                MessageBox.Show("Год должен быть числом.");
+                MessageBox.Show("Р“РѕРґ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ С‡РёСЃР»РѕРј.");
                 return;
             }
 
             if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(author) || string.IsNullOrEmpty(genre))
             {
-                MessageBox.Show("Заполните все поля.");
+                MessageBox.Show("Р—Р°РїРѕР»РЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ.");
                 return;
             }
 
             _logic.CreateBook(title, author, year, genre);
             LoadBooks();
             ClearFields();
-            MessageBox.Show("Книга добавлена!");
+            MessageBox.Show("РљРЅРёРіР° РґРѕР±Р°РІР»РµРЅР°!");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (listBoxBooks.SelectedIndex == -1)
             {
-                MessageBox.Show("Выберите книгу для удаления.");
+                MessageBox.Show("Р’С‹Р±РµСЂРёС‚Рµ РєРЅРёРіСѓ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ.");
                 return;
             }
 
@@ -79,11 +80,11 @@ namespace WinFormsApp
             {
                 LoadBooks();
                 ClearFields();
-                MessageBox.Show("Книга удалена.");
+                MessageBox.Show("РљРЅРёРіР° СѓРґР°Р»РµРЅР°.");
             }
             else
             {
-                MessageBox.Show("Ошибка удаления.");
+                MessageBox.Show("РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ.");
             }
         }
 
@@ -91,7 +92,7 @@ namespace WinFormsApp
         {
             if (listBoxBooks.SelectedIndex == -1)
             {
-                MessageBox.Show("Выберите книгу для редактирования.");
+                MessageBox.Show("Р’С‹Р±РµСЂРёС‚Рµ РєРЅРёРіСѓ РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ.");
                 return;
             }
 
@@ -113,7 +114,7 @@ namespace WinFormsApp
         {
             if (string.IsNullOrEmpty(textBoxId.Text))
             {
-                MessageBox.Show("Сначала выберите книгу для редактирования.");
+                MessageBox.Show("РЎРЅР°С‡Р°Р»Р° РІС‹Р±РµСЂРёС‚Рµ РєРЅРёРіСѓ РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ.");
                 return;
             }
 
@@ -124,13 +125,13 @@ namespace WinFormsApp
 
             if (!int.TryParse(textBoxYear.Text, out year))
             {
-                MessageBox.Show("Год должен быть числом.");
+                MessageBox.Show("Р“РѕРґ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ С‡РёСЃР»РѕРј.");
                 return;
             }
 
             if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(author) || string.IsNullOrEmpty(genre))
             {
-                MessageBox.Show("Заполните все поля.");
+                MessageBox.Show("Р—Р°РїРѕР»РЅРёС‚Рµ РІСЃРµ РїРѕР»СЏ.");
                 return;
             }
 
@@ -139,11 +140,11 @@ namespace WinFormsApp
             {
                 LoadBooks();
                 ClearFields();
-                MessageBox.Show("Книга обновлена.");
+                MessageBox.Show("РљРЅРёРіР° РѕР±РЅРѕРІР»РµРЅР°.");
             }
             else
             {
-                MessageBox.Show("Ошибка обновления.");
+                MessageBox.Show("РћС€РёР±РєР° РѕР±РЅРѕРІР»РµРЅРёСЏ.");
             }
         }
 
@@ -153,12 +154,12 @@ namespace WinFormsApp
             var result = new StringBuilder();
             foreach (var group in groups)
             {
-                result.AppendLine($"Жанр: {group.Key}");
+                result.AppendLine($"Р–Р°РЅСЂ: {group.Key}");
                 foreach (var book in group.Value)
                     result.AppendLine($"  {book}");
                 result.AppendLine();
             }
-            MessageBox.Show(result.ToString(), "Группировка по жанрам");
+            MessageBox.Show(result.ToString(), "Р“СЂСѓРїРїРёСЂРѕРІРєР° РїРѕ Р¶Р°РЅСЂР°Рј");
         }
 
         
@@ -175,18 +176,18 @@ namespace WinFormsApp
             }
             else
             {
-                MessageBox.Show("Введите имя автора для поиска.");
+                MessageBox.Show("Р’РІРµРґРёС‚Рµ РёРјСЏ Р°РІС‚РѕСЂР° РґР»СЏ РїРѕРёСЃРєР°.");
                 return;
             }
 
             if (books.Any())
             {
                 var result = string.Join("\n", books.Select(b => b.ToString()));
-                MessageBox.Show(result, "Найденные книги");
+                MessageBox.Show(result, "РќР°Р№РґРµРЅРЅС‹Рµ РєРЅРёРіРё");
             }
             else
             {
-                MessageBox.Show("Книги не найдены.");
+                MessageBox.Show("РљРЅРёРіРё РЅРµ РЅР°Р№РґРµРЅС‹.");
             }
         }
 
@@ -196,7 +197,7 @@ namespace WinFormsApp
             var title = textBoxSearchTitle.Text;
             if (string.IsNullOrWhiteSpace(title))
             {
-                MessageBox.Show("Введите название книги для поиска.");
+                MessageBox.Show("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РєРЅРёРіРё РґР»СЏ РїРѕРёСЃРєР°.");
                 return;
             }
 
@@ -204,12 +205,17 @@ namespace WinFormsApp
             if (books.Any())
             {
                 var result = string.Join("\n", books.Select(b => b.ToString()));
-                MessageBox.Show(result, "Найденные книги");
+                MessageBox.Show(result, "РќР°Р№РґРµРЅРЅС‹Рµ РєРЅРёРіРё");
             }
             else
             {
-                MessageBox.Show("Книги не найдены.");
+                MessageBox.Show("РљРЅРёРіРё РЅРµ РЅР°Р№РґРµРЅС‹.");
             }
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            LoadBooks();
         }
 
         private void ClearFields()
@@ -238,7 +244,7 @@ namespace WinFormsApp
             var title = textBoxSearchTitle.Text;
             if (string.IsNullOrWhiteSpace(title))
             {
-                MessageBox.Show("Введите название книги для поиска.");
+                MessageBox.Show("Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РєРЅРёРіРё РґР»СЏ РїРѕРёСЃРєР°.");
                 return;
             }
 
@@ -246,12 +252,13 @@ namespace WinFormsApp
             if (books.Any())
             {
                 var result = string.Join("\n", books.Select(b => b.ToString()));
-                MessageBox.Show(result, "Найденные книги");
+                MessageBox.Show(result, "РќР°Р№РґРµРЅРЅС‹Рµ РєРЅРёРіРё");
             }
             else
             {
-                MessageBox.Show("Книги не найдены.");
+                MessageBox.Show("РљРЅРёРіРё РЅРµ РЅР°Р№РґРµРЅС‹.");
             }
         }
     }
 }
+
